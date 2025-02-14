@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
          let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
 
          let product = products[indexPath.row]
-        cell.textLabel?.text = products.first
+         cell.textLabel?.text = product
 
                 return cell
     }
