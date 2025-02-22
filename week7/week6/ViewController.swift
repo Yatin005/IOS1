@@ -39,6 +39,7 @@ class ViewController: UIViewController ,
         // Do any additional setup after loading the view.
         model = ((UIApplication.shared.delegate) as! AppDelegate).myModel
     }
+    
 
     
     @IBAction func uploadPhotoClicked(_ sender: Any) {

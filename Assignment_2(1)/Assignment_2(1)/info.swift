@@ -6,25 +6,17 @@
 //
 
 import Foundation
-class Product {
-    
+
+struct Product {
     var name : String
-
-    init(name: String) {
-        self.name = name
-    }
-}
-
-
-class ProgrammingClassManager {
-    // MVC
-    var listOfStudnets = [
-        Product(name: "John Lee"),
-        Product(name: "Mary Smith"),
-        Product(name: "George Dao"),
-    ]
+    var price : Int
+    var quantity: Int
     
-    func addNewProduct (newPrd: Product) {
-        listOfStudnets.append(newPrd)
-    }
+}
+struct PurchaseHistory {
+    var name : String
+    var quantity : Int
+    var totalPrice : Double
+    var purchaseDate :Date
+    
 }
