@@ -9,21 +9,18 @@ import UIKit
 
 class ManagerViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var products: [Product] = []
+       var history: [PurchaseHistory] = []
 
-        // Do any additional setup after loading the view.
-    }
-    
+       @IBAction func historyPressed(_ sender: UIButton) {
+           let historyVC = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+           historyVC.history = history
+           navigationController?.pushViewController(historyVC, animated: true)
+       }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+       @IBAction func restockPressed(_ sender: UIButton) {
+           let restockVC = storyboard?.instantiateViewController(withIdentifier: "RestockViewController") as! RestockViewController
+           restockVC.products = products
+           navigationController?.pushViewController(restockVC, animated: true)
+       }
+   }
