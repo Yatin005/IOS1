@@ -12,100 +12,125 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var productLabel: UILabel!
+    @IBOutlet weak var label: UILabel!
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var quantityLabel: UILabel!
-    @IBOutlet weak var totalLabel: UILabel!
-    var products: [Product] = [
-        Product(name: "Hat", price: 10, quantity: 10),
-        Product(name: "Shirt", price: 20, quantity: 5),
-        Product(name: "Shoes", price: 50, quantity: 13),
-        Product(name: "T-Shirts", price: 20, quantity: 30),
-        Product(name: "Dresses", price: 25, quantity: 20)
-    ]
+    @IBOutlet weak var table: UITableView!
     
-    var selectedProduct: Product?
-    var selectedQuantity: Int = 0
-    var history: [PurchaseHistory] = []
     
+    var model: ProductManager?
+    
+    
+    @IBOutlet weak var quantity: UILabel!
+    
+    @IBOutlet weak var tottal: UILabel!
+    var selectedProductID : UUID?
+    var selectProduct : Product?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        resetUI()
+        // Do any additional setup after loading the view.
+        tottal.text = "Total"
+        quantity.text = ""
+        model = ((UIApplication.shared.delegate) as! AppDelegate).myModel
+        table.delegate = self
+        table.dataSource = self
     }
-    
-    func resetUI() {
-        productLabel.text = "Select Product"
-        quantityLabel.text = ""
-        totalLabel.text = "$0.00"
-        selectedQuantity = 0
-    }
-    
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        model?.productList.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let product = products[indexPath.row]
-        cell.textLabel?.text = "\(product.name) - \(product.quantity) "
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell()
+        cell.textLabel?.text = model?.productList[indexPath.row].name
+        cell.detailTextLabel?.text! = String(model?.productList[indexPath.row].quantity ?? 0)
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedProduct = products[indexPath.row]
-        productLabel.text = selectedProduct?.name
-    }
     
-    @IBAction func digitPressed(_ sender: UIButton) {
-        quantityLabel.text! += sender.titleLabel?.text ?? ""
-        calculateTotal()
-     
-    }
-    
-    func calculateTotal() {
-        if let product = selectedProduct {
-            let total = (Int(quantityLabel.text!) ?? 0) * product.price
-            totalLabel.text = "$\(total)"
+    @IBAction func digit(_ sender: Any) {
+        
+        if selectProduct != nil {
+            quantity.text! += (sender as AnyObject).titleLabel?.text ?? ""
+            let quantity = Int(quantity.text!) ?? 0
+            let price = selectProduct?.price ?? 0
+            print(quantity, price, (quantity * price))
+            tottal.text! = String((quantity * price))
         }
-         
-    }
-    
-    @IBAction func BuyClicked(_ sender: Any) {
-        guard let product = selectedProduct else {
-            showAlert(title: "Error", message: "Select a product first")
-            return
-        }
-        
-        guard selectedQuantity > 0, selectedQuantity <= product.quantity else {
-            showAlert(title: "Error", message: "Not enough stock")
-            return
-           
-        }
-    
-        
-        // Update
-        if let index = products.firstIndex(where: { $0.name == product.name }) {
-            products[index].quantity -= selectedQuantity
-        }
-        
-        
-        
-        func showAlert(title: String, message: String) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        else{
+            let alert = UIAlertController(title: "Alert", message: "Please Select Type of Product", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
-            present(alert, animated: true)
+            present(alert, animated: false)
+            
+        }
+    }
+    
+ 
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
         }
         
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedProductID = model?.productList[indexPath.row].id
+        selectProduct = model?.productList[indexPath.row]
+        label.text = model?.productList[indexPath.row].name ?? "Error"
+        if quantity.text?.count ?? 0 > 0 {
+            let quantity = Int(quantity.text!) ?? 0
+            let price = selectProduct?.price ?? 0
+            tottal.text! = String((quantity * price))
+        }
     }
-    @IBAction func managerClicked(_ sender: Any) {
-        let managerVC = storyboard?.instantiateViewController(identifier: "ManagerViewController") as! ManagerViewController
-        managerVC.products = products
-        managerVC.history = history
-        managerVC.delegate = self
-        navigationController?.pushViewController(managerVC, animated: true)
+    
+    @IBAction func ByClicked(_ sender: UIButton) {
         
+        
+        if let id = selectedProductID {
+            if quantity.text?.count ?? 0 > 0 {
+                let amount = Int(quantity.text!)
+                if ((model?.isAvaliable(productID: selectedProductID!, quatity: amount!))!) {
+                    model?.buy_Product(productID: selectedProductID!, newQuatity: amount!)
+                } else{
+                    let alert = UIAlertController(title: "Alert", message: "Pruchase Failed, not sufficent stock", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    present(alert, animated: false)
+                }
+                table.reloadData()
+            }
+            else{
+                let alert = UIAlertController(title: "Alert", message: "Please Enter Amount of Product for  Pruchase", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                present(alert, animated: false)
+            }
+        }
+        else{
+            let alert = UIAlertController(title: "Alert", message: "Please Select Type of Product", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: false)
+        }
+        tottal.text = ""
+        quantity.text = ""
     }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        table.reloadData()
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
+

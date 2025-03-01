@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         else {
             return
         }
-        let newBook = Book(title: title, isRead: false)books.append(newBook)
+        let newBook = Book(title: title, isRead: false);books.append(newBook)
         tableview.reloadData()
     }
 

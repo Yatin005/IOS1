@@ -2,29 +2,36 @@
 //  HistoryViewController.swift
 //  Assignment_2(1)
 //
-//  Created by Yatin Parulkar on 2025-02-26.
+//  Created by Yatin Parulkar on 2025-02-28.0
 //
 
 import UIKit
 
-class HistoryViewController: UIViewController, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
-        var history: [PurchaseHistory] = []
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            tableView.dataSource = self
+class HistoryViewController: UIViewController {
+    
+    
+    var object : History?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadData()
+        // Do any additional setup after loading the view.
+    }
+    
+    @IBOutlet weak var qty: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var name: UILabel!
+        
+        // Do any additional setup after loading the view.
+        func loadData(){
+            if let data = object {
+                self.title = data.productName
+                name.text = "Product Name: \(data.productName)"
+                price.text = "Product Price: \(data.price)"
+                qty.text = "Product Qty: \(data.quantity)"
+                date.text = "Product Date: \(data.timestamp.formatted())"
+            }
         }
 
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return history.count
-        }
-
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath)
-            let purchase = history[indexPath.row]
-            cell.textLabel?.text = "\(purchase.name) x\(purchase.quantity) - $\(purchase.totalPrice)"
-            return cell
-        }
     }

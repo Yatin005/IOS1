@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D84A9F242D6F5E33002F0C2D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84A9F232D6F5E33002F0C2D /* HistoryViewController.swift */; };
-		D84A9F262D6F5F34002F0C2D /* RestokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84A9F252D6F5F34002F0C2D /* RestokeViewController.swift */; };
 		D8510B662D694B32009F344F /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8510B652D694B32009F344F /* ManagerViewController.swift */; };
 		D8BE00EE2D5FA4110035E1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE00ED2D5FA4110035E1FE /* AppDelegate.swift */; };
 		D8BE00F02D5FA4110035E1FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE00EF2D5FA4110035E1FE /* SceneDelegate.swift */; };
@@ -20,6 +18,10 @@
 		D8BE010F2D5FA4120035E1FE /* Assignment_2_1_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE010E2D5FA4120035E1FE /* Assignment_2_1_UITests.swift */; };
 		D8BE01112D5FA4120035E1FE /* Assignment_2_1_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE01102D5FA4120035E1FE /* Assignment_2_1_UITestsLaunchTests.swift */; };
 		D8BE011E2D5FB05D0035E1FE /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE011D2D5FB05D0035E1FE /* info.swift */; };
+		D8F278752D725E7A00E3423E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F278742D725E7A00E3423E /* HistoryViewController.swift */; };
+		D8F278772D7266C700E3423E /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F278762D7266C700E3423E /* HistoryTableViewController.swift */; };
+		D8F2787B2D7280CF00E3423E /* NewHistoryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2787A2D7280CF00E3423E /* NewHistoryTableController.swift */; };
+		D8F2787D2D72863900E3423E /* RestockTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F2787C2D72863900E3423E /* RestockTableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D84A9F232D6F5E33002F0C2D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		D84A9F252D6F5F34002F0C2D /* RestokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestokeViewController.swift; sourceTree = "<group>"; };
 		D8510B652D694B32009F344F /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
 		D8BE00EA2D5FA4110035E1FE /* Assignment_2(1).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment_2(1).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BE00ED2D5FA4110035E1FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +57,10 @@
 		D8BE010E2D5FA4120035E1FE /* Assignment_2_1_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment_2_1_UITests.swift; sourceTree = "<group>"; };
 		D8BE01102D5FA4120035E1FE /* Assignment_2_1_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment_2_1_UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D8BE011D2D5FB05D0035E1FE /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
+		D8F278742D725E7A00E3423E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D8F278762D7266C700E3423E /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		D8F2787A2D7280CF00E3423E /* NewHistoryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHistoryTableController.swift; sourceTree = "<group>"; };
+		D8F2787C2D72863900E3423E /* RestockTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestockTableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +120,10 @@
 				D8BE00FB2D5FA4120035E1FE /* Info.plist */,
 				D8BE011D2D5FB05D0035E1FE /* info.swift */,
 				D8510B652D694B32009F344F /* ManagerViewController.swift */,
-				D84A9F232D6F5E33002F0C2D /* HistoryViewController.swift */,
-				D84A9F252D6F5F34002F0C2D /* RestokeViewController.swift */,
+				D8F278742D725E7A00E3423E /* HistoryViewController.swift */,
+				D8F278762D7266C700E3423E /* HistoryTableViewController.swift */,
+				D8F2787A2D7280CF00E3423E /* NewHistoryTableController.swift */,
+				D8F2787C2D72863900E3423E /* RestockTableController.swift */,
 			);
 			path = "Assignment_2(1)";
 			sourceTree = "<group>";
@@ -272,10 +278,12 @@
 			files = (
 				D8510B662D694B32009F344F /* ManagerViewController.swift in Sources */,
 				D8BE00F22D5FA4110035E1FE /* ViewController.swift in Sources */,
-				D84A9F262D6F5F34002F0C2D /* RestokeViewController.swift in Sources */,
 				D8BE011E2D5FB05D0035E1FE /* info.swift in Sources */,
-				D84A9F242D6F5E33002F0C2D /* HistoryViewController.swift in Sources */,
+				D8F2787B2D7280CF00E3423E /* NewHistoryTableController.swift in Sources */,
+				D8F278752D725E7A00E3423E /* HistoryViewController.swift in Sources */,
+				D8F278772D7266C700E3423E /* HistoryTableViewController.swift in Sources */,
 				D8BE00EE2D5FA4110035E1FE /* AppDelegate.swift in Sources */,
+				D8F2787D2D72863900E3423E /* RestockTableController.swift in Sources */,
 				D8BE00F02D5FA4110035E1FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
