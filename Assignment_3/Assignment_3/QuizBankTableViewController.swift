@@ -8,12 +8,12 @@
 import UIKit
 class QuestionBankTableViewController: UITableViewController, QuestionBankDelegate {
     func didAddQuestion() {
-        print(localModel?.questions ?? [])
         questions = localModel?.questions ?? []
         tableView.reloadData()
     }
     
     func didUpdateQuestion() {
+        questions = localModel?.questions ?? []
         tableView.reloadData()
     }
     var localModel: Quiz?
@@ -50,5 +50,19 @@ class QuestionBankTableViewController: UITableViewController, QuestionBankDelega
         cell.Incorrect2.text = question.incorrect[1]
         cell.Incorrect3.text = question.incorrect[2]
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "updateQuestion"{
+            if let UpdateVC = segue.destination as? UpdateViewController{
+                print("To Update View")
+                let localModel = self.localModel
+                let index  = tableView.indexPathForSelectedRow?.row ?? 0
+                print(localModel?.questions[index])
+                UpdateVC.selectQuestion = localModel?.questions[index]
+                        
+            }
+                    
+        }
     }
 }

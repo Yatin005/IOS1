@@ -173,35 +173,35 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpV-EC-ui9">
-                                            <rect key="frame" x="32" y="83" width="42" height="29"/>
+                                            <rect key="frame" x="32" y="83" width="341" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-qe-zRD">
-                                            <rect key="frame" x="32" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="32" y="11" width="341" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1J-gt-dcK">
-                                            <rect key="frame" x="32" y="45" width="42" height="21"/>
+                                            <rect key="frame" x="32" y="45" width="341" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5n-mX-cF7">
-                                            <rect key="frame" x="32" y="164" width="42" height="21"/>
+                                            <rect key="frame" x="32" y="164" width="341" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-ZO-aYC">
-                                            <rect key="frame" x="32" y="120" width="42" height="21"/>
+                                            <rect key="frame" x="32" y="120" width="341" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -215,6 +215,7 @@
                                     <outlet property="Incorrect2" destination="dX2-ZO-aYC" id="A4o-lV-cg0"/>
                                     <outlet property="Incorrect3" destination="D5n-mX-cF7" id="pUD-Vg-3gy"/>
                                     <outlet property="QuestionLabel" destination="2l5-qe-zRD" id="TRN-25-dhO"/>
+                                    <segue destination="2G6-Wr-e9e" kind="presentation" identifier="updateQuestion" id="yDh-DY-itz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -227,7 +228,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add"/>
                                 <connections>
-                                    <segue destination="Pqu-RS-MDx" kind="presentation" id="5ga-BV-JoT"/>
+                                    <segue destination="Pqu-RS-MDx" kind="presentation" identifier="addQuestion" id="5ga-BV-JoT"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -258,12 +259,12 @@
             </objects>
             <point key="canvasLocation" x="90.839694656488547" y="-34.507042253521128"/>
         </scene>
-        <!--Question Builder View Controller-->
+        <!--Update View Controller-->
         <scene sceneID="Jej-xE-PDK">
             <objects>
-                <viewController id="2G6-Wr-e9e" customClass="QuestionBuilderViewController" customModule="Assignment_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2G6-Wr-e9e" customClass="UpdateViewController" customModule="Assignment_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lxp-ho-E8O">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enZ-Sk-Lg2">
@@ -364,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Je-fH-NpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2912" y="-328"/>
+            <point key="canvasLocation" x="2992" y="-328"/>
         </scene>
     </scenes>
     <resources>
@@ -375,7 +376,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

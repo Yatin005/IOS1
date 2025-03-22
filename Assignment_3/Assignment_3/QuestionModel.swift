@@ -9,9 +9,9 @@ import Foundation
 
 struct Questions {
     let id: UUID
-    let text: String
-    let answers: String
-    let incorrect: [String]
+    var text: String
+    var answers: String
+    var incorrect: [String]
     
     init(id: UUID, text: String, answers: String, incorrect: [String]) {
         self.id = id
