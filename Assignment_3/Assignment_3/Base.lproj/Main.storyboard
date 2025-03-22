@@ -53,7 +53,7 @@
             <objects>
                 <viewController id="Pqu-RS-MDx" customClass="QuestionBuilderViewController" customModule="Assignment_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="01H-7s-GYn">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9TZ-1G-99F">
@@ -212,19 +212,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Question Bank" id="nBV-Hi-I67">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="EP8-Kr-Dp2">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="s4t-nh-XQc">
-                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="4Az-0F-RDP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ww1-41-IHr">
+                                <rect key="frame" x="-37" y="-17" width="87" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="+">
-                                    <color key="baseForegroundColor" systemColor="groupTableViewBackgroundColor"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
                             </button>
-                            <connections>
-                                <segue destination="Pqu-RS-MDx" kind="presentation" id="63V-e7-Cjl"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -255,9 +249,6 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

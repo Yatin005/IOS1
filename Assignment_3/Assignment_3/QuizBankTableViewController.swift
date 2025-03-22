@@ -77,8 +77,7 @@ class QuestionBankTableViewController: UITableViewController {
     @objc func addQuestionTapped() {
         let questionBuilderVC = QuestionBuilderViewController()
         questionBuilderVC.delegate = delegate
-         // Use present instead of push.
-        present(questionBuilderVC, animated: true, completion: nil)
+       
     }
 
     // MARK: - Data Handling

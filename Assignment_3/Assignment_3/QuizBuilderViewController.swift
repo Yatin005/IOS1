@@ -29,7 +29,7 @@ class QuestionBuilderViewController: UIViewController {
     private func setupUI() {
         setupTitle()
         setupTextFields()
-        setupDoneButton()
+        
     }
     
     private func setupTitle() {
@@ -56,6 +56,7 @@ class QuestionBuilderViewController: UIViewController {
             }
             
         }
+        return incorrectAnswers
         
         
     }
