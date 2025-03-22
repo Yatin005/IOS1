@@ -25,6 +25,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Start the Quiz">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="quU-aR-TSh" kind="show" id="89F-B3-7Zc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o3-Ri-Phg">
                                 <rect key="frame" x="83" y="256" width="224" height="96"/>
@@ -47,6 +50,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1017.5572519083969" y="-34.507042253521128"/>
+        </scene>
+        <!--Riddles View Controller-->
+        <scene sceneID="hth-MR-uvE">
+            <objects>
+                <viewController id="quU-aR-TSh" customClass="RiddlesViewController" customModule="Assignment_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="84Q-tE-lmw" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-5b-bV4" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
+                                <rect key="frame" x="37" y="335" width="316" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="bMA-8e-jad"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGi-Wq-cXf" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
+                                <rect key="frame" x="37" y="292" width="316" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20" titleAlignment="leading"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="szB-oS-AsJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o9-f4-U4m" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
+                                <rect key="frame" x="37" y="439" width="316" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="BTO-L4-nRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7G-CY-dYo">
+                                <rect key="frame" x="37" y="666" width="45" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&lt;&lt;"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="quU-aR-TSh" eventType="touchUpInside" id="6Si-wO-Q64"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25l-hW-DWG">
+                                <rect key="frame" x="318" y="666" width="45" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&gt;&gt;"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="quU-aR-TSh" eventType="touchUpInside" id="7hu-h7-IXW"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sX7-E5-A7S">
+                                <rect key="frame" x="39" y="654" width="314" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fj-tC-MvX">
+                                <rect key="frame" x="37" y="95" width="316" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0K-rv-rMC" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
+                                <rect key="frame" x="39" y="385" width="316" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="LFq-5X-v4C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zYH-0g-R04"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fEf-HL-CPt"/>
+                    <connections>
+                        <outlet property="BackButton" destination="f7G-CY-dYo" id="P5B-50-Md2"/>
+                        <outlet property="NextButton" destination="25l-hW-DWG" id="KIa-bR-0vg"/>
+                        <outlet property="OptionFourRadio" destination="5o9-f4-U4m" id="9dP-3E-3Zk"/>
+                        <outlet property="OptionOneRadio" destination="EGi-Wq-cXf" id="BwW-U7-8gH"/>
+                        <outlet property="OptionThreeRadio" destination="u0K-rv-rMC" id="dm1-LL-X9k"/>
+                        <outlet property="OptionTwoRadio" destination="Kpj-5b-bV4" id="Uhh-1Y-AiW"/>
+                        <outlet property="ProgressBar" destination="sX7-E5-A7S" id="GM8-AY-nYp"/>
+                        <outlet property="questionLabel" destination="4Fj-tC-MvX" id="VlK-mz-trM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVk-Gc-NuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896.9465648854962" y="374.64788732394368"/>
         </scene>
         <!--Question Builder View Controller-->
         <scene sceneID="vOv-ay-N3A">
@@ -369,6 +465,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

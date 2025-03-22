@@ -13,6 +13,12 @@ struct Questions {
     var answers: String
     var incorrect: [String]
     
+    func shuffledAnswers() -> [String] {
+        var allAnswers = incorrect
+        allAnswers.append(answers)
+        return allAnswers.shuffled()
+    }
+    
     init(id: UUID, text: String, answers: String, incorrect: [String]) {
         self.id = id
         self.text = text
