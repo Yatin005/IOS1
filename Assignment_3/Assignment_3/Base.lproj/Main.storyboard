@@ -59,33 +59,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-5b-bV4" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
-                                <rect key="frame" x="37" y="335" width="316" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20"/>
-                                <connections>
-                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="bMA-8e-jad"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGi-Wq-cXf" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
-                                <rect key="frame" x="37" y="292" width="316" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20" titleAlignment="leading"/>
-                                <connections>
-                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="szB-oS-AsJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o9-f4-U4m" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
-                                <rect key="frame" x="37" y="439" width="316" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20"/>
-                                <connections>
-                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="BTO-L4-nRx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7G-CY-dYo">
                                 <rect key="frame" x="37" y="666" width="45" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,13 +88,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-5b-bV4" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
+                                <rect key="frame" x="35" y="485" width="316" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="bMA-8e-jad"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGi-Wq-cXf" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
+                                <rect key="frame" x="35" y="442" width="316" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20" titleAlignment="leading"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="szB-oS-AsJ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0K-rv-rMC" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
-                                <rect key="frame" x="39" y="385" width="316" height="35"/>
+                                <rect key="frame" x="37" y="535" width="316" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20"/>
                                 <connections>
                                     <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="LFq-5X-v4C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o9-f4-U4m" customClass="CustomRadioButton" customModule="Assignment_3" customModuleProvider="target">
+                                <rect key="frame" x="35" y="589" width="316" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" title="Button" imagePadding="20"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="quU-aR-TSh" eventType="touchUpInside" id="BTO-L4-nRx"/>
                                 </connections>
                             </button>
                         </subviews>
