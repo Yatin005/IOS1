@@ -7,11 +7,9 @@
 
 import UIKit
 
-class QuestionBuilderViewController: UIViewController {
-    
-    weak var delegate: QuestionBankDelegate?
-    var questionToEdit: Questions?
-    
+class QuestionBuilderViewController: UIViewController{
+
+    var localModel: Quiz?
     // MARK: - IBOutlets
     @IBOutlet weak var questionTextField: UITextField!
     @IBOutlet weak var correctAnswerTextField: UITextField!
@@ -23,48 +21,10 @@ class QuestionBuilderViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        localModel = ((UIApplication.shared.delegate) as! AppDelegate).model
     }
     
-    private func setupUI() {
-        setupTitle()
-        setupTextFields()
-        
-    }
     
-    private func setupTitle() {
-        title = (questionToEdit != nil) ? "Edit Question" : "Add New Question"
-    }
-    
-    private func setupTextFields() {
-        // Populate text fields if editing a question
-        if let question = questionToEdit {
-            questionTextField.text = question.text
-            correctAnswerTextField.text = question.answers[question.correctAnswerIndex]
-            let incorrectAnswers = getIncorrectAnswers(from: question)
-            incorrect1TextField.text = incorrectAnswers.count > 0 ? incorrectAnswers[0] : ""
-            incorrect2TextField.text = incorrectAnswers.count > 1 ? incorrectAnswers[1] : ""
-            incorrect3TextField.text = incorrectAnswers.count > 2 ? incorrectAnswers[2] : ""
-        }
-    }
-    
-    private func getIncorrectAnswers(from question: Questions) -> [String] {
-        var incorrectAnswers = [String]()
-        for (index, answer) in question.answers.enumerated() {
-            if index != question.correctAnswerIndex {
-                incorrectAnswers.append(answer)
-            }
-            
-        }
-        return incorrectAnswers
-        
-        
-    }
-
-
-    private func setupDoneButton() {
-        doneButton.setTitle((questionToEdit != nil) ? "Save" : "Done", for: .normal)
-    }
 
     // MARK: - IBActions
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
@@ -80,16 +40,9 @@ class QuestionBuilderViewController: UIViewController {
             showAlert(title: "Missing Information", message: "Please fill in all fields.")
             return
         }
-
-        let answers = [correctAnswer, incorrect1, incorrect2, incorrect3]
-        // Ensure correct answer is at index 0
-        let updatedQuestion = Questions(text: questionText, answers: answers, correctAnswerIndex: 0)
-
-        if questionToEdit != nil {
-            delegate?.didUpdateQuestion(updatedQuestion)
-        } else {
-            delegate?.didAddQuestion(updatedQuestion)
-        }
+        let answers = [incorrect1, incorrect2, incorrect3]
+        let newQuestion = Questions(id: UUID(), text: questionText, answers: correctAnswer, incorrect: answers)
+        localModel?.add(newQuiz: newQuestion)
         dismiss(animated: true, completion: nil)
     }
 

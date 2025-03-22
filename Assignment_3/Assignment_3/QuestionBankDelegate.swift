@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol QuestionBankDelegate: AnyObject {
-    func didAddQuestion(_ question: Questions)
-    func didUpdateQuestion(_ question: Questions)
+protocol QuestionBankDelegate {
+    func didAddQuestion()
+    func didUpdateQuestion()
 }

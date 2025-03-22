@@ -8,7 +8,15 @@
 import Foundation
 
 struct Questions {
+    let id: UUID
     let text: String
-    let answers: [String]
-    let correctAnswerIndex: Int
+    let answers: String
+    let incorrect: [String]
+    
+    init(id: UUID, text: String, answers: String, incorrect: [String]) {
+        self.id = id
+        self.text = text
+        self.answers = answers
+        self.incorrect = incorrect
+    }
 }

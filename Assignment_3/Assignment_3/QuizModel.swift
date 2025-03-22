@@ -7,28 +7,30 @@
 
 import Foundation
 
-struct Quiz {
-    let questions: [Questions]
+
+
+class Quiz {
+    
+    static var shared : Quiz = Quiz()
+    var delagate : QuestionBankDelegate?
+    
+    var questions: [Questions] = []
     var currentQuestionIndex = 0
-    var userAnswers: [Int?]
+    var userAnswers: [String] = []
     var score = 0
 
-    init(questions: [Questions]) {
-        self.questions = questions
-        self.userAnswers = Array(repeating: nil, count: questions.count)
-    }
-
-    mutating func submitAnswer(answerIndex: Int) {
-        userAnswers[currentQuestionIndex] = answerIndex
-        if answerIndex == questions[currentQuestionIndex].correctAnswerIndex {
-            score += 1
-        }
-    }
-
+   
     func calculateAverage() -> Double {
         guard !questions.isEmpty else {
             return 0.0
         }
         return Double(score) / Double(questions.count) * 100.0
+    }
+    
+    func add(newQuiz : Questions) {
+        print("inAdd", newQuiz)
+        self.questions.append(newQuiz)
+        print(questions)
+        delagate?.didAddQuestion()
     }
 }

@@ -21,6 +21,8 @@
 		D88F67EF2D8E20ED003B8AEB /* QuestionBankDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F67EE2D8E20ED003B8AEB /* QuestionBankDelegate.swift */; };
 		D88F67F12D8E38E7003B8AEB /* QuizBankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F67F02D8E38E6003B8AEB /* QuizBankTableViewController.swift */; };
 		D88F67F32D8E3964003B8AEB /* QuizBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F67F22D8E3964003B8AEB /* QuizBuilderViewController.swift */; };
+		D8D54CDA2D8E493000505CEA /* QuestionBankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D54CD92D8E493000505CEA /* QuestionBankTableViewCell.swift */; };
+		D8D54CDC2D8E542300505CEA /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D54CDB2D8E542300505CEA /* UpdateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		D88F67EE2D8E20ED003B8AEB /* QuestionBankDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankDelegate.swift; sourceTree = "<group>"; };
 		D88F67F02D8E38E6003B8AEB /* QuizBankTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBankTableViewController.swift; sourceTree = "<group>"; };
 		D88F67F22D8E3964003B8AEB /* QuizBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBuilderViewController.swift; sourceTree = "<group>"; };
+		D8D54CD92D8E493000505CEA /* QuestionBankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankTableViewCell.swift; sourceTree = "<group>"; };
+		D8D54CDB2D8E542300505CEA /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				D88F67EE2D8E20ED003B8AEB /* QuestionBankDelegate.swift */,
 				D88F67F02D8E38E6003B8AEB /* QuizBankTableViewController.swift */,
 				D88F67F22D8E3964003B8AEB /* QuizBuilderViewController.swift */,
+				D8D54CD92D8E493000505CEA /* QuestionBankTableViewCell.swift */,
+				D8D54CDB2D8E542300505CEA /* UpdateViewController.swift */,
 			);
 			path = Assignment_3;
 			sourceTree = "<group>";
@@ -278,9 +284,11 @@
 				D88F67F12D8E38E7003B8AEB /* QuizBankTableViewController.swift in Sources */,
 				D88F67AD2D8DCC48003B8AEB /* AppDelegate.swift in Sources */,
 				D88F67EF2D8E20ED003B8AEB /* QuestionBankDelegate.swift in Sources */,
+				D8D54CDA2D8E493000505CEA /* QuestionBankTableViewCell.swift in Sources */,
 				D88F67AF2D8DCC48003B8AEB /* SceneDelegate.swift in Sources */,
 				D88F67ED2D8E20C0003B8AEB /* QuizModel.swift in Sources */,
 				D88F67EB2D8E201C003B8AEB /* QuestionModel.swift in Sources */,
+				D8D54CDC2D8E542300505CEA /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
