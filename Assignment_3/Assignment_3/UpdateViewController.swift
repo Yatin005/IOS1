@@ -17,8 +17,6 @@ class UpdateViewController: UIViewController {
     @IBOutlet weak var incorrect1TextField: UITextField!
     @IBOutlet weak var incorrect2TextField: UITextField!
     @IBOutlet weak var incorrect3TextField: UITextField!
-    @IBOutlet weak var doneButton: UIButton!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         localModel = ((UIApplication.shared.delegate) as! AppDelegate).model

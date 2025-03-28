@@ -16,7 +16,6 @@ class QuestionBuilderViewController: UIViewController{
     @IBOutlet weak var incorrect1TextField: UITextField!
     @IBOutlet weak var incorrect2TextField: UITextField!
     @IBOutlet weak var incorrect3TextField: UITextField!
-    @IBOutlet weak var doneButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

@@ -1,16 +1,19 @@
 //
 //  AppDelegate.swift
-//  Assignment_3
+//  WeatherApp
 //
-//  Created by Yatin Parulkar on 2025-03-21.
+//  Created by Rania Arbash on 2025-03-14.
 //
 
 import UIKit
+import CoreData
 
 @main
- class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var model = Quiz.shared
+
+    var myGlobaleNum = 90
+    var myNetworkingModel = NetworkingManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -31,6 +34,22 @@ import UIKit
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
+  
+
+    // MARK: - Core Data Saving support
+    lazy var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "fav_cities")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+   
 
 }
 
