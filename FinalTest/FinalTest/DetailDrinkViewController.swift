@@ -12,9 +12,12 @@ class DetailDrinkViewController: UIViewController {
     @IBOutlet weak var strDrink: UILabel!
     @IBOutlet weak var strCategory: UILabel!
     @IBOutlet weak var strAlcoholic: UILabel!
-    @IBOutlet weak var strInstruction: UILabel!
-    @IBOutlet weak var strInstructionES: UILabel!
-    @IBOutlet weak var strInstructionDE: UILabel!
+    @IBOutlet weak var strInstruction: UITextView!
+    
+    @IBOutlet weak var strInstructionES: UITextView!
+    @IBOutlet weak var strInstructionDE: UITextView!
+    
+
     
     var drinkID: String?
     var drinkDetail: DrinkDetail?
